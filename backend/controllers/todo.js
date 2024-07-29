@@ -95,7 +95,8 @@ const updateTodo = async (req, res) => {
     // In the line "todo.title = title || todo.title" if the title is present in the request body, it will update the title of the todo, 
     // otherwise it will keep the current title
     todo.title = title || todo.title;
-    todo.done = done || todo.done;
+    
+    todo.done = done;
 
     // Write the updated todos array to the JSON file
     writeData(todos); 
