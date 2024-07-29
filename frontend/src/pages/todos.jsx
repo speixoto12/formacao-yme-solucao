@@ -38,7 +38,8 @@ export default function Todos() {
   
   return (
     <div>
-      <TodoList todoList={todos} />
+      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">Todo List</h5>
+      <TodoList todoList={todos} setTodos={setTodos}/>
       <form onSubmit={handleFormSubmit}>
         <input type="text" name="title" />
         <button type="submit">Add Todo</button>

@@ -137,7 +137,7 @@ const deleteTodo = async (req, res) => {
     writeData(todos); 
     
     // Send a success response
-    res.status(200).json({ message: 'Todo deleted' })
+    res.status(200).json(todos);
     
   } catch (error) {
     // If there is an error, send an error response
