@@ -39,11 +39,13 @@ export default function Todos() {
   return (
     <div>
       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">Todo List</h5>
-      <TodoList todoList={todos} setTodos={setTodos}/>
-      <form onSubmit={handleFormSubmit}>
-        <input type="text" name="title" />
-        <button type="submit">Add Todo</button>
+      <form className="mb-2" onSubmit={handleFormSubmit}>
+        <div className='flex justify-between'>
+        <input type="text" name="title" className='border border-gray-400 mr-2 p-0.5 flex-grow rounded-md'/>
+        <button type="submit" className='rounded-md bg-blue-400 p-1'>Add</button>
+        </div>
       </form>
+      <TodoList todoList={todos} setTodos={setTodos}/>
     </div>
   )
 

@@ -53,7 +53,7 @@ const createTodo = async (req, res) => {
     const todos = parseData(); 
 
     // Create a new todo object
-    const newTodo = { id: uuidv4, title, done: false }; 
+    const newTodo = { id: uuidv4(), title, done: false }; 
     
     // Add the new todo to the todos array
     todos.push(newTodo);
@@ -137,7 +137,7 @@ const deleteTodo = async (req, res) => {
     writeData(todos); 
     
     // Send a success response
-    res.status(200).json(todos);
+    res.status(200).json({ message: 'Todo deleted' });
     
   } catch (error) {
     // If there is an error, send an error response
