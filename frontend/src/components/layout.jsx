@@ -5,7 +5,7 @@ import Navbar from '@/components/navbar';
 
 export default function Layout() {
   return (
-    <div>
+    <div className="">
       <Navbar />
       <Outlet />
     </div>

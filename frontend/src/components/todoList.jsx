@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoItem from './todoItem';
 
 export default function TodoList({ todoList }) {
 
@@ -12,7 +13,7 @@ export default function TodoList({ todoList }) {
         <h1>Todo List</h1>
         <ul>
           {todoList.map((todo, index) => (
-            <li key={index}>{todo}</li>
+            <li key={index}>{todo.title}</li>
           ))}
         </ul>
       </div>
