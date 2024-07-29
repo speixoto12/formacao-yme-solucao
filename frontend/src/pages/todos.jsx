@@ -47,7 +47,7 @@ export default function Todos() {
       <form className="mb-2" onSubmit={handleFormSubmit}>
         <div className='flex justify-between'>
           <input type="text" name="title" className='border border-gray-400 mr-2 p-0.5 flex-grow rounded-md'/>
-          <button type="submit" className='rounded-md bg-blue-400 p-1'>Add</button>
+          <button type="submit" className='rounded-md bg-blue-500 py-1 px-2 text-white'>Add</button>
         </div>
       </form>
       <TodoList todoList={todos} setTodos={setTodos}/> {/* Render TodoList component */}
