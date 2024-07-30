@@ -36,7 +36,8 @@ app.use(cors(corsOptions));
 
 
 // Routes
-app.use('/api/todos', todoRoutes); // All routes starting with /api/todos will be handled by todoRoutes
+// All routes starting with /api/todos will be handled by todoRoutes
+app.use('/api/todos', todoRoutes); 
 
 
 app.listen(port, () => {
